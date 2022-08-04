@@ -5,6 +5,7 @@ use std::process::{Command, Stdio, exit};
 use std::io::{self, Write};
 use std::error::Error;
 use std::{env, net};
+use igd::SearchOptions;
 
 fn addr_ip(addr: net::Ipv4Addr) -> u32 {
     let octets = addr.octets();
@@ -65,7 +66,7 @@ fn try_main() -> io::Result<i32> {
 
     let port = try!(port.parse().map_err(|_| io::Error::new(io::ErrorKind::InvalidData, "connection port must be numeric")));
 
-    let gateway = try!(igd::search_gateway()
+    let gateway = try!(igd::search_gateway(SearchOptions::default())
         .map_err(|e| io::Error::new(io::ErrorKind::Other, e))
     );
 

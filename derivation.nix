@@ -18,7 +18,7 @@ in rustPlatform.buildRustPackage {
   buildInputs = optionals hostPlatform.isDarwin [ libiconv ];
 
   src = _arg'src;
-  cargoSha256 = "sha256-goUsJnjutah8k3d+DrtaFAndX17ZIuq/Kr3hWt2+yEA=";
+  cargoSha256 = "sha256-3TzTpBmKanPhLAuTTYvWqh7S/1N3MUub0RSSS1BOJ84=";
   inherit buildType;
 
   doCheck = false;

@@ -2,6 +2,7 @@
 name = "mosh-server-upnp"
 version = "0.1.0"
 authors = ["arcnmx"]
+edition = "2018"
 
 description = "mosh-server wrapper for NATs"
 keywords = ["mosh", "mosh-server", "NAT", "UPnP"]
